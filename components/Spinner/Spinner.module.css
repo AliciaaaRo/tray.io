@@ -1,0 +1,39 @@
+.spinner {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 24px;
+}
+.spinner .square {
+  width: 100px;
+  height: 100px;
+  background: #2866e5;
+  animation: square 2s linear infinite;
+  margin: auto;
+  position: relative;
+  transform: rotate(45deg);
+}
+.spinner .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  animation: circle 2s linear infinite;
+  position: absolute;
+  background: #0a0e36;
+  top: 100px;
+  left: 100px;
+}
+@keyframes square {
+  from {transform: rotate(45deg)}
+  to {transform: rotate(405deg)}
+}
+@keyframes circle {
+25%  {top: 0; left: 100px;}
+50%  {top: 0; left: 0;}
+60%  {background: #fff;}
+75%  {top: 100px; left: 0;  background: #fff;}
+100% {top: 100px; left: 100px;}
+}
